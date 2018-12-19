@@ -1,0 +1,18 @@
+Void
+
+Si el tipo de valor devuelto es void, Web API simplemente devuelve una respuesta HTTP vacía con el código de estado 204 (sin contenido).
+
+Controlador de ejemplo:
+
+public class ValuesController : ApiController
+{
+    public void Post()
+    {
+    }
+}
+
+Respuesta HTTP:
+
+HTTP/1.1 204 No Content
+Server: Microsoft-IIS/8.0
+Date: Mon, 27 Jan 2014 02:13:26 GMT

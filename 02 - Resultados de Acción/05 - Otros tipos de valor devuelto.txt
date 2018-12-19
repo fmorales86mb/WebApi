@@ -1,0 +1,32 @@
+Otros tipos de valor devuelto
+
+Para los demás tipos de valor devueltos, API Web usa un formateador media para serializar el valor devuelto. API Web escribe el valor serializado en el cuerpo de respuesta. El código de estado de respuesta es 200 (OK).
+
+public class ProductsController : ApiController
+{
+    public IEnumerable<Product> Get()
+    {
+        return GetAllProductsFromDB();
+    }
+}
+
+Una desventaja de este enfoque es que directamente no se puede devolver un código de error, por ejemplo, 404. Sin embargo, se puede producir un HttpResponseException para códigos de error. Para obtener más información, consulte Exception Handling in ASP.NET Web API.
+
+API Web usa el encabezado Accept en la solicitud para elegir al formateador. Para obtener más información, consulte negociación de contenido.
+
+Solicitud de ejemplo:
+
+GET http://localhost/api/products HTTP/1.1
+User-Agent: Fiddler
+Host: localhost:24127
+Accept: application/json
+
+Respuesta de ejemplo:
+
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Server: Microsoft-IIS/8.0
+Date: Mon, 27 Jan 2014 08:53:35 GMT
+Content-Length: 56
+
+[{"Id":1,"Name":"Yo-yo","Category":"Toys","Price":6.95}]

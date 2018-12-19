@@ -1,0 +1,44 @@
+HttpResponseMessage
+
+Si la acción devuelve un HttpResponseMessage, Web API convierte el valor devuelto directamente en un mensaje de respuesta HTTP, mediante las propiedades de la HttpResponseMessage objeto para rellenar el respuesta.
+
+Esta opción proporciona un gran control sobre el mensaje de respuesta. Por ejemplo, la siguiente acción del controlador establece el encabezado Cache-Control.
+
+public class ValuesController : ApiController
+{
+    public HttpResponseMessage Get()
+    {
+        HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, "value");
+        response.Content = new StringContent("hello", Encoding.Unicode);
+        response.Headers.CacheControl = new CacheControlHeaderValue()
+        {
+            MaxAge = TimeSpan.FromMinutes(20)
+        };
+        return response;
+    } 
+}
+
+Respuesta:
+
+HTTP/1.1 200 OK
+Cache-Control: max-age=1200
+Content-Length: 10
+Content-Type: text/plain; charset=utf-16
+Server: Microsoft-IIS/8.0
+Date: Mon, 27 Jan 2014 08:53:35 GMT
+
+hello
+
+Si se pasa un modelo de dominio para el CreateResponse método, Web API usa un formateador media para escribir el modelo serializado en el cuerpo de respuesta.
+
+public HttpResponseMessage Get()
+{
+    // Get a list of products from a database.
+    IEnumerable<Product> products = GetProductsFromDB();
+
+    // Write the list to the response body.
+    HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, products);
+    return response;
+}
+
+API Web usa el encabezado Accept en la solicitud para elegir al formateador. Para obtener más información, consulte negociación de contenido.

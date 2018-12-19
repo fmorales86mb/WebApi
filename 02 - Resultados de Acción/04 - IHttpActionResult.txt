@@ -1,0 +1,73 @@
+IHttpActionResult
+
+El IHttpActionResult interfaz se introdujo en Web API 2. Básicamente, define un HttpResponseMessage factory. Estas son algunas ventajas de utilizar el IHttpActionResult interfaz:
+
+    Simplifica las pruebas unitarias los controladores.
+    Mueve la lógica común para crear respuestas HTTP en clases independientes.
+    Hace que la intención de la acción del controlador es más clara, ocultando los detalles de bajo nivel de construir la respuesta.
+
+IHttpActionResult contiene un método único, ExecuteAsync, que crea de forma asincrónica un HttpResponseMessage instancia.
+
+public interface IHttpActionResult
+{
+    Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken);
+}
+
+Si una acción de controlador devuelve un IHttpActionResult, llamadas de API Web la ExecuteAsync método para crear un HttpResponseMessage. A continuación, convierte el HttpResponseMessage en un mensaje de respuesta HTTP.
+
+Esta es una implementación simple que haga de IHttpActionResult que crea una respuesta de texto sin formato:
+
+public class TextResult : IHttpActionResult
+{
+    string _value;
+    HttpRequestMessage _request;
+
+    public TextResult(string value, HttpRequestMessage request)
+    {
+        _value = value;
+        _request = request;
+    }
+    public Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
+    {
+        var response = new HttpResponseMessage()
+        {
+            Content = new StringContent(_value),
+            RequestMessage = _request
+        };
+        return Task.FromResult(response);
+    }
+}
+
+Acción de controlador de ejemplo:
+
+public class ValuesController : ApiController
+{
+    public IHttpActionResult Get()
+    {
+        return new TextResult("hello", Request);
+    }
+}
+
+Respuesta:
+
+HTTP/1.1 200 OK
+Content-Length: 5
+Content-Type: text/plain; charset=utf-8
+Server: Microsoft-IIS/8.0
+Date: Mon, 27 Jan 2014 08:53:35 GMT
+
+hello
+
+Más a menudo, usará el IHttpActionResult implementaciones definidas en el System.Web.Http.Results espacio de nombres. El ApiController clase define los métodos auxiliares que devuelven estos resultados de acción integrada.
+
+En el ejemplo siguiente, si la solicitud no coincide con un identificador de producto existente, el controlador llama a ApiController.NotFound para crear una respuesta 404 (no encontrado). En caso contrario, el controlador llama a ApiController.OK, que crea una respuesta 200 (OK) que contiene el producto.
+
+public IHttpActionResult Get (int id)
+{
+    Product product = _repository.Get (id);
+    if (product == null)
+    {
+        return NotFound(); // Returns a NotFoundResult
+    }
+    return Ok(product);  // Returns an OkNegotiatedContentResult
+}

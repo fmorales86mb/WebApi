@@ -1,0 +1,18 @@
+Este tema describe cómo ASP.NET Web API convierte el valor devuelto de una acción de controlador en un mensaje de respuesta HTTP.
+
+Una acción de controlador Web API puede devolver cualquiera de las siguientes acciones:
+
+    void
+    HttpResponseMessage
+    IHttpActionResult
+    Algún otro tipo
+
+Dependiendo de cuál de estos se devuelven, API Web usa un mecanismo diferente para crear la respuesta HTTP.
+
+Tipo devuelto 	        Cómo se crea la respuesta Web API
+void 	                Devolver vacía 204 (sin contenido)
+HttpResponseMessage 	Convertir directamente en un mensaje de respuesta HTTP.
+IHttpActionResult 	    Llame a ExecuteAsync para crear un HttpResponseMessage, a continuación, convertir en un mensaje de respuesta                         HTTP.
+Otro tipo 	            Escribir el valor devuelto serializado en el cuerpo de respuesta; Devuelve 200 (OK).
+
+El resto de este tema describe cada opción con más detalle.
