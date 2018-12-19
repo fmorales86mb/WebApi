@@ -1,0 +1,13 @@
+ASP.NET Web API es un marco para crear las API web sobre .NET Framework. 
+En este tutorial, usará la API Web de ASP.NET para crear una API web que devuelve una lista de productos.
+
+Modelo
+Un modelo es un objeto que representa los datos de la aplicación. ASP.NET Web API puede serializar automáticamente el modelo en JSON, XML o algún otro formato y, a continuación, escribe los datos serializados en el cuerpo del mensaje de respuesta HTTP. Siempre que un cliente puede leer el formato de serialización, que se puede deserializar el objeto. La mayoría de los clientes pueden analizar XML o JSON. Además, el cliente puede indicar el formato que desee estableciendo el encabezado Accept del mensaje de solicitud HTTP.
+
+Controlador
+En la API Web, un controlador es un objeto que controla las solicitudes HTTP.
+
+Cada método en el controlador corresponde a uno o varios de los URI:
+Método de controlador 	Identificador URI
+GetAllProducts 	        productos/api /
+GetProduct 	            /API/productos/Id.
