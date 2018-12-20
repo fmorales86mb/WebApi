@@ -1,0 +1,6 @@
+Todo lo que se necesita para crear una API web que pueden tener acceso los clientes se encuentra en la carpeta WebAPI.
+Modelo y controlador.
+
+En el master page agrego el place holder de la página que quiero que se muestre.
+
+En mi página agrego la referencia a jQuery y el script de javascript.
