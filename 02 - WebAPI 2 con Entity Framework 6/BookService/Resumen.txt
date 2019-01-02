@@ -1,11 +1,17 @@
-Este tutorial le enseñará los aspectos básicos de la creación de una aplicación web con ASP.NET Web API back-end. El tutorial usa Entity Framework 6 para la capa de datos y Knockout.js para la aplicación de JavaScript del lado cliente. El tutorial también muestra cómo implementar la aplicación en Azure App Service Web Apps.
+Este tutorial le enseñará los aspectos básicos de la creación de una aplicación web con ASP.NET Web API back-end. El tutorial usa 
+Entity Framework 6 para la capa de datos y Knockout.js para la aplicación de JavaScript del lado cliente. El tutorial también muestra 
+cómo implementar la aplicación en Azure App Service Web Apps.
 
 
 Este tutorial usa para crear una aplicación web que se manipula una base de datos back-end ASP.NET Web API 2 con Entity Framework 6.
 
-La aplicación utiliza un diseño de la aplicación de página única (SPA). "Aplicación de página única" es el término general para una aplicación web que se carga una página HTML única y, a continuación, actualiza la página de forma dinámica, en lugar de cargar páginas nuevas. Después de la carga de página inicial, la aplicación se comunica con el servidor a través de las solicitudes AJAX. El AJAX solicita devolver datos JSON, que la aplicación usa para actualizar la interfaz de usuario.
+La aplicación utiliza un diseño de la aplicación de página única (SPA). "Aplicación de página única" es el término general para una 
+aplicación web que se carga una página HTML única y, a continuación, actualiza la página de forma dinámica, en lugar de cargar páginas 
+nuevas. Después de la carga de página inicial, la aplicación se comunica con el servidor a través de las solicitudes AJAX. El AJAX 
+solicita devolver datos JSON, que la aplicación usa para actualizar la interfaz de usuario.
 
-AJAX no es nueva, pero hoy en día existen marcos de JavaScript que resulte más fácil crear y mantener una gran aplicación SPA sofisticada. Este tutorial se usa Knockout.js, pero puede usar cualquier marco de cliente de JavaScript.
+AJAX no es nueva, pero hoy en día existen marcos de JavaScript que resulte más fácil crear y mantener una gran aplicación SPA 
+sofisticada. Este tutorial se usa Knockout.js, pero puede usar cualquier marco de cliente de JavaScript.
 
 Estos son los principales bloques de creación para esta aplicación:
 
@@ -19,3 +25,16 @@ Entity Framework utilizará estos modelos para crear tablas de base de datos.
 
 CONTROLADORES
 En esta sección, vamos a agregar controladores de API Web que admiten operaciones CRUD (crear, leer, actualizar y eliminar). Los controladores usará Entity Framework para comunicarse con la capa de base de datos.
+
+Migraciones de CodeFirst (Entity Framework) para inicializar la BD:
+Desde el herramientas menú, seleccione Administrador de paquetes de NuGet, a continuación, seleccione Package Manager Console. En la 
+ventana de consola de administrador de paquetes, escriba el siguiente comando: Enable-Migrations
+Este comando agrega una carpeta denominada migraciones a su proyecto, además de un archivo de código denominado Configuration.cs en 
+la carpeta de migraciones.
+
+Add-Migration Initial: El primer comando genera código que crea la base de datos y el segundo comando ejecuta ese código.
+
+Update-Database: La base de datos se crea localmente, mediante LocalDB. Se ejecuta el método Seed de configuración. En este ejemplo
+    se harcodean datos.
+
+El nombre del servidor depende de la versión de mssql que se tenga. Ej: (localdb)\MSSQLLocalDB

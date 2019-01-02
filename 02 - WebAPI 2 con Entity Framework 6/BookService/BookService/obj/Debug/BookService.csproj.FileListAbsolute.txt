@@ -45,3 +45,5 @@ C:\Users\federico.morales\source\Repositorios Propios\WebApi\02 - WebAPI 2 con E
 C:\Users\federico.morales\source\Repositorios Propios\WebApi\02 - WebAPI 2 con Entity Framework 6\BookService\BookService\bin\EntityFramework.SqlServer.dll
 C:\Users\federico.morales\source\Repositorios Propios\WebApi\02 - WebAPI 2 con Entity Framework 6\BookService\BookService\bin\EntityFramework.xml
 C:\Users\federico.morales\source\Repositorios Propios\WebApi\02 - WebAPI 2 con Entity Framework 6\BookService\BookService\bin\EntityFramework.SqlServer.xml
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\02 - WebAPI 2 con Entity Framework 6\BookService\BookService\obj\Debug\BookService.Migrations.Initial.resources
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\02 - WebAPI 2 con Entity Framework 6\BookService\BookService\obj\Debug\BookService.csproj.GenerateResource.cache
