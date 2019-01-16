@@ -88,3 +88,27 @@ opción consiste en usar una biblioteca como AutoMapper que controla la conversió
 automáticamente.
 
 -----------------------------------------------------------------------------------------------------------
+
+Cliente de JavaScript
+
+En esta sección, creará el cliente para la aplicación, mediante
+HTML, JavaScript y el Knockout.js biblioteca.
+
+La biblioteca Knockout usa el patrón Model-View-ViewModel (MVVM)
+
+El modelo es la representación del lado servidor de los datos en el dominio de negocio (en nuestro caso, libros y autores).
+El vista es la capa de presentación (HTML).
+El modelo de vista es un objeto de JavaScript que contiene los modelos. El modelo de vista es una abstracción de código de la interfaz de usuario. No tiene ningún conocimiento de la representación de HTML. En su lugar, características abstractas de la vista, representa como "una lista de libros".
+
+Server              Client
+    webAPI <-ajax-> Model(json) <-> ViewModel <-dataBinding> View(html)
+
+Agregar biblioteca knockout 
+por consola: Install-Package knockoutjs
+
+
+Agregar un script Bundle (empaquetador?):
+La unión es una característica de ASP.NET 4.5 que facilita combinar o agrupar varios archivos en un único archivo. La unión reduce el 
+número de solicitudes al servidor, lo que puede mejorar el tiempo de carga de página.
+
+-----------------------------------------------------------------------------------------------------------
