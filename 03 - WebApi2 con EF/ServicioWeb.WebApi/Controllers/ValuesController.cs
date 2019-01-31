@@ -12,6 +12,9 @@ using System.Web.Http;
  * C -> Post, R -> Get, U -> Put, D -> Delete (Analogía con CRUD)
  * El api expone una funcionalidad. El controlador es el punto de entrada.
  * 
+ * 
+ * Creo uno proyecto aparte para los modelos, sería como una capa. Permite reutilizar código. No hay que olvidarse agregar 
+ * la referencia al proyecto.
 */
 
 namespace ServicioWeb.WebApi.Controllers

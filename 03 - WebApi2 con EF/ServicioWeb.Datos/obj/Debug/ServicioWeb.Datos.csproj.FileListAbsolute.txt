@@ -1,0 +1,12 @@
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\03 - WebApi2 con EF\ServicioWeb.Datos\bin\Debug\ServicioWeb.Datos.dll.config
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\03 - WebApi2 con EF\ServicioWeb.Datos\bin\Debug\ServicioWeb.Datos.dll
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\03 - WebApi2 con EF\ServicioWeb.Datos\bin\Debug\ServicioWeb.Datos.pdb
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\03 - WebApi2 con EF\ServicioWeb.Datos\bin\Debug\EntityFramework.dll
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\03 - WebApi2 con EF\ServicioWeb.Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\03 - WebApi2 con EF\ServicioWeb.Datos\bin\Debug\EntityFramework.xml
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\03 - WebApi2 con EF\ServicioWeb.Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\03 - WebApi2 con EF\ServicioWeb.Datos\obj\Debug\ServicioWeb.Datos.csprojAssemblyReference.cache
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\03 - WebApi2 con EF\ServicioWeb.Datos\obj\Debug\ServicioWeb.Datos.csproj.CoreCompileInputs.cache
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\03 - WebApi2 con EF\ServicioWeb.Datos\obj\Debug\ServicioWeb.Datos.csproj.CopyComplete
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\03 - WebApi2 con EF\ServicioWeb.Datos\obj\Debug\ServicioWeb.Datos.dll
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\03 - WebApi2 con EF\ServicioWeb.Datos\obj\Debug\ServicioWeb.Datos.pdb
