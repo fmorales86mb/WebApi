@@ -1,0 +1,29 @@
+﻿
+WEB API CON ENTITY FRAMEWORK
+
+* Generalidades:
+Rest es una arquitectura basada en HTTP. Un servicio web que utiliza esta arquitectura es llamado servicio Rest Full.
+Al basarse en el protocolo HTTP, Rest utiliza los verbos Get, Post, etc. 
+Recursos son cualquier objeto que lleguemos a utilizar, datos, tablas.
+
+Analogía con CRUD:
+C -> Post, 
+R -> Get, 
+U -> Put, 
+D -> Delete
+
+El api expone una funcionalidad. El controlador es el punto de entrada.
+
+* Modelo:
+Creo un proyecto aparte para los modelos, sería como una capa. Permite reutilizar código. No hay que olvidarse agregar 
+la referencia al proyecto. 
+Creo el modelo con EF desde una DB. Se agrega un ADO.NET Entity Data Model, de paso el nombre del servidor y de la base de datos.
+Selecciono la tabla y se crea el modelo. También se crea el ConnectionString que tengo que pasar al Web.config de la WebApi.
+
+* WebAPI:
+Para utilizar EF debo instalar los paquetes, para eso utilizo el administrador de paquetes nuget.
+Con eso tenemos la referencia a EF, la referencia al proyecto de Datos y el ConnectionString en el Web.config
+
+* Controller
+Creo un nuevo controller WebAPI2 vacío con los métodos que necesite. El template del proyecto ya viene con un front sencillo que
+genera la documentación de las apis. En la documentación hay ejemplos de xml y json, a partir de estos se pueden crear las clases.
