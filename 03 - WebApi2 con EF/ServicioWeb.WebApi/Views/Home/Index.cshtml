@@ -11,7 +11,11 @@
 </div>
 
 <div class="row">
-        <h3>Autor</h3>
-        <p>Dato: <strong data-bind="text: name"></strong></p>
-        
- </div>
+    <h3>Autor</h3>
+    <p>Id Autor: <input type="text" data-bind="value: id" /></p>
+    @* si pongo los parentesis al getAuthor lo ejecuta al cargar la página. *@
+    <button data-bind="click: getAuthor">Buscar</button>
+    @*<p>Autor: <strong data-bind="text: Autor().name"></strong></p>*@
+    <p>Autor: <strong data-bind="text: Autor().name"></strong></p>
+    @*<p>Nombre: <input data-bind="value: Autor().name"/></p>*@
+</div>

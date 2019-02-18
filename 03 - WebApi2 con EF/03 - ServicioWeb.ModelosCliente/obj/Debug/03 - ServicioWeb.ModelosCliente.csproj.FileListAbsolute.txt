@@ -1,0 +1,6 @@
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\03 - WebApi2 con EF\03 - ServicioWeb.ModelosCliente\bin\Debug\03 - ServicioWeb.ModelosCliente.dll
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\03 - WebApi2 con EF\03 - ServicioWeb.ModelosCliente\bin\Debug\03 - ServicioWeb.ModelosCliente.pdb
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\03 - WebApi2 con EF\03 - ServicioWeb.ModelosCliente\obj\Debug\03 - ServicioWeb.ModelosCliente.csprojAssemblyReference.cache
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\03 - WebApi2 con EF\03 - ServicioWeb.ModelosCliente\obj\Debug\03 - ServicioWeb.ModelosCliente.csproj.CoreCompileInputs.cache
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\03 - WebApi2 con EF\03 - ServicioWeb.ModelosCliente\obj\Debug\03 - ServicioWeb.ModelosCliente.dll
+C:\Users\federico.morales\source\Repositorios Propios\WebApi\03 - WebApi2 con EF\03 - ServicioWeb.ModelosCliente\obj\Debug\03 - ServicioWeb.ModelosCliente.pdb

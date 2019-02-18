@@ -1,0 +1,8 @@
+﻿PROYECTO MVC
+
+Proyecto MVC que representa al cliente que va a consumir a la WebApi.
+El proyecto de Datos, con EF con los modelos de la WebApi y de la DB, permite acceder a la DB. Por lo tanto no lo agregamos al 
+proyecto del cliente, esto sería un hueco de seguridad.
+Estos mismos modelos se van a utilizar como base para el cliente pero en una capa (proyecto) distinta, una librería de clases.
+
+

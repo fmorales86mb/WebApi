@@ -33,5 +33,13 @@ namespace ServicioWeb.WebApi.Controllers
             var autor = DB.Authors.FirstOrDefault(x => x.Id == id); // linq
             return autor;
         }
+
+        // POST api/Author/autor
+        [HttpPost]
+        public void Add(Authors author)
+        {
+            DB.Authors.Add(author);
+        }
+
     }
 }

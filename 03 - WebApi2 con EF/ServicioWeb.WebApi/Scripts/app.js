@@ -2,41 +2,34 @@
 // Tengo que registrar el archivo js en el BundleConfig
 // Tengo que agregar la referencia en el cshtml
 
-//----------------- ViewModel -----------------
+
+//----------------- ViewModel ----------------
+
+function AuthorModel(id, name) {
+    var self = this;
+    self.id = id;
+    self.name = ko.observable(name);
+};
 
 var AuthorViewModel = function () {
     var self = this;
+
     var uri = 'api/Author/';
-    var id;
-    self.name = ko.observable();
+    self.id = ko.observable();
+    self.Autor = ko.observable(new AuthorModel(2, 'pepe'));
 
-    function GetAuthor() {
-        $.ajax({
-            url: 'api/Author/1',
-            type: 'GET',
-            //data: data,
-            //data: function (data) {
-            //    self.name(data);
-            //},
-            success: function (info) {
-                console.log(info);
-            },
-        })
-    }
+    self.getAuthor = function () {                   
+        $.getJSON(uri + self.id(), function (data) {
+            // Esto es lo mismo: document.getElementById("dato").textContent = author1;
+            //$('#dato').text(data.Name); 
+            console.log(data.Name);
+            self.Autor = ko.observable(new AuthorModel(data.Id, data.Name));
+            console.log(self.Autor.name);
+        });        
+    };   
+};
 
-    function getAuthorName() {
-        GetAuthor().done(function (data) {
-            self.name(data);
-        });
-    }
-
-    getAuthorName();
-    //GetAuthor();
-}
-
-ko.applyBindings(new AuthorViewModel()); // no es ok es ko!!!!
-
-
+ko.applyBindings(new AuthorViewModel()); 
 
 
 

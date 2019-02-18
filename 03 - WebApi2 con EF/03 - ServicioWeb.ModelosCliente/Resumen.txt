@@ -1,0 +1,9 @@
+﻿Esta capa de modelos se utiliza entre el cliente y la WebApi. Es similar, sino idéntica, a 
+la capa de Datos. No se utiliza la capa de Datos ya que tiene acceso a la DB y sería un
+hueco en la seguridad.
+
+Se puede copiar directamente las clases de Datos en esta librería.
+
+Esta capa sí se agrega como referencia en el cliente.
+
+El cliente puede crear otros modelos que representen la lógica de negocio.
