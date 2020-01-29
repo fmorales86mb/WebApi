@@ -1,0 +1,13 @@
+﻿@model WebAppMVC.Models.ReservasModel;
+
+<div class="text-center">
+    <table>
+        @foreach (ReservaModel reserva in Model.Reservas)
+        {
+            <tr>
+                <td>@reserva.Fecha</td>
+                <td>@reserva.Monto</td>
+            </tr>
+        }
+    </table>    
+</div>

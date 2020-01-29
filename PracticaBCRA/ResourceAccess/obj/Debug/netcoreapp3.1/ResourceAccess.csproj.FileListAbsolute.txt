@@ -1,0 +1,11 @@
+C:\Users\Trabajo\Documents\WebApi\PracticaBCRA\ResourceAccess\bin\Debug\netcoreapp3.1\ResourceAccess.deps.json
+C:\Users\Trabajo\Documents\WebApi\PracticaBCRA\ResourceAccess\bin\Debug\netcoreapp3.1\ResourceAccess.dll
+C:\Users\Trabajo\Documents\WebApi\PracticaBCRA\ResourceAccess\bin\Debug\netcoreapp3.1\ResourceAccess.pdb
+C:\Users\Trabajo\Documents\WebApi\PracticaBCRA\ResourceAccess\bin\Debug\netcoreapp3.1\Models.dll
+C:\Users\Trabajo\Documents\WebApi\PracticaBCRA\ResourceAccess\bin\Debug\netcoreapp3.1\Models.pdb
+C:\Users\Trabajo\Documents\WebApi\PracticaBCRA\ResourceAccess\obj\Debug\netcoreapp3.1\ResourceAccess.csprojAssemblyReference.cache
+C:\Users\Trabajo\Documents\WebApi\PracticaBCRA\ResourceAccess\obj\Debug\netcoreapp3.1\ResourceAccess.AssemblyInfoInputs.cache
+C:\Users\Trabajo\Documents\WebApi\PracticaBCRA\ResourceAccess\obj\Debug\netcoreapp3.1\ResourceAccess.AssemblyInfo.cs
+C:\Users\Trabajo\Documents\WebApi\PracticaBCRA\ResourceAccess\obj\Debug\netcoreapp3.1\ResourceAccess.csproj.CopyComplete
+C:\Users\Trabajo\Documents\WebApi\PracticaBCRA\ResourceAccess\obj\Debug\netcoreapp3.1\ResourceAccess.dll
+C:\Users\Trabajo\Documents\WebApi\PracticaBCRA\ResourceAccess\obj\Debug\netcoreapp3.1\ResourceAccess.pdb
